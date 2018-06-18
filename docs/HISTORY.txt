@@ -4,6 +4,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
+- Added improvements about README file [macagua]
+
 - Added a GenericSetup Uninstall profile [macagua]
 
 - Updated Diazo theme manifest file [macagua]

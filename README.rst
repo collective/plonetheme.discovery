@@ -1,15 +1,38 @@
+====================
+plonetheme.discovery
+====================
+
+
 Introduction
 ============
 
-The ``plonetheme.discovery`` package uses the *theming & packaging* features
-available in `plone.app.theming`_ to make the theme `discovery`_ easily
-available in `Plone 4.1`_ or higher.
+*plonetheme.discovery* package is an installable Plone_ Theme using the **theming** and **packaging** 
+features available in `plone.app.theming`_ to make the theme `discovery`_ easily
+available in `Plone`.
+
+
+Requirements
+============
+
+- From the Plone 4.1.x To the Plone 4.3 latest versión (https://plone.org/download)
+- The ``plone.app.theming`` package (*will be installed as a dependency of this package*)
+
+
+Features
+========
+
+- It's an installable Plone_ Theme package.
+- After installation from Add-ons controlpanel, this theme is enabled automatically.
+- Also it's a simple Diazo_ package (Zip file).
+- It's have support for clean uninstallation.
+
 
 Installation
-------------
+============
+
 
 Add Plone site
-~~~~~~~~~~~~~~
+--------------
 
 Install Plone 4.x with `plone.app.theming`_ and create a Plone site (if you have not already)
 with Diazo theming configured.
@@ -19,13 +42,13 @@ with Diazo theming configured.
   :alt: Create a Plone site from ZMI
   :align: center
 
+
 Zip file
-~~~~~~~~
+--------
 
-If you are an end user, you might enjoy installation via zip file import.
+If you are an **end user**, you might enjoy installation via zip file import.
 
-1. Download the zip file: https://raw.github.com/collective/plonetheme.discovery/master/discovery.zip
-
+1. Download a `zip file <https://raw.github.com/collective/plonetheme.discovery/master/discovery.zip>`_.
 2. Import the theme from the Diazo theme control panel.
 
 .. image:: https://github.com/collective/plonetheme.discovery/raw/master/screenshot1.png
@@ -35,22 +58,35 @@ If you are an end user, you might enjoy installation via zip file import.
 
 
 Buildout
-~~~~~~~~
+--------
 
-If you are a developer, you might enjoy installation via buildout.
+If you are a **developer user**, you might enjoy installing it via buildout.
 
-Add ``plonetheme.discovery`` to your ``plone.recipe.zope2instance`` section's *eggs* parameter e.g.::
+For install ``plonetheme.discovery`` package add it to your ``buildout`` section's 
+*eggs* parameter e.g.: ::
 
-    [instance]
+   [buildout]
+    ...
     eggs =
-        Plone
-        …
+        ...
         plonetheme.discovery
 
-Select theme
-~~~~~~~~~~~~
 
-Select and enable the theme from the Diazo control panel.
+and then running ``bin/buildout``.
+
+Or, you can add it as a dependency on your own product ``setup.py`` file: ::
+
+    install_requires=[
+        ...
+        'plonetheme.discovery',
+    ],
+
+
+Enabling the theme
+^^^^^^^^^^^^^^^^^^
+
+Browse to ``http://yoursite/Plone/@@theming-controlpanel`` click on ``Enable`` 
+on ``Discovery`` theme from the Diazo control panel.
 
 .. image:: https://github.com/collective/plonetheme.discovery/raw/master/screenshot2.png
   :width: 1024px
@@ -59,13 +95,32 @@ Select and enable the theme from the Diazo control panel.
 
 That's it!
 
-You should see:
+You should see the layout of the site when viewed in a computer resolution:
 
-.. image:: https://raw.github.com/collective/plonetheme.discovery/master/plonetheme/discovery/static/preview.png
-  :width: 1024px
-  :alt: plonetheme.discovery preview
-  :align: center
+.. image:: https://raw.githubusercontent.com/collective/plonetheme.discovery/master/plonetheme/discovery/static/preview.png
+    :align: center
 
+
+Contribute
+==========
+
+- Issue Tracker: https://github.com/collective/plonetheme.discovery/issues
+- Source Code: https://github.com/collective/plonetheme.discovery
+
+
+License
+=======
+
+This package is licensed under the GPL Version 2.
+
+
+Credits
+-------
+
+- Giacomo Spettoli (giacomo.spettoli at gmail dot com).
+- Leonardo J. Caballero G. (leonardocaballero at gmail dot com).
+
+.. _`Plone`: http://plone.org
+.. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
 .. _`discovery`: http://www.freecsstemplates.org/preview/discovery/
-.. _`plone.app.theming`: http://pypi.python.org/pypi/plone.app.theming
-.. _`Plone 4.1`: http://pypi.python.org/pypi/Plone/4.1rc2
+.. _`Diazo`: http://diazo.org
