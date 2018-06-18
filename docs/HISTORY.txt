@@ -4,6 +4,8 @@ Changelog
 1.2 (unreleased)
 ----------------
 
+- Updated Diazo theme manifest file [macagua]
+
 - Updated Diazo theme zip file [macagua]
 
 - Updated manifest file for diazo theme and preview file [macagua]
