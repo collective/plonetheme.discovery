@@ -14,7 +14,7 @@ setup(
         author_email='giacomo.spettoli@gmail.com',
         maintainer='Leonardo Caballero',
         maintainer_email='leonardocaballero@gmail.com',
-        url='https://github.com/giacomos/plonetheme.discovery',
+        url='https://github.com/collective/plonetheme.discovery',
         license='GPL',
         packages=find_packages(),
         include_package_data=True,
