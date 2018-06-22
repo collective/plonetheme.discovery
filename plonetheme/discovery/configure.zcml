@@ -18,7 +18,7 @@
   <genericsetup:registerProfile
       name="uninstall"
       directory="profiles/uninstall"
-      title="plonetheme.discovery: Uninstall profile for Plone 4 Diazo Theme"
+      title="plonetheme.discovery Uninstall"
       description="Uninstall the plonetheme.discovery package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
